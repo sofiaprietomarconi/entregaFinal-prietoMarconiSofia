@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Arsenal+SC:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Arsenal SC", sans-serif;
+    font-weight: 400;
+    font-style: normal
+}
+
+header{
+    background-color:#73877B;
+    color:white;
+    padding: 30px;
+    text-align: center;
+}
+
+.container{
+    height: 100vh;
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+    "bloque-dimension     bloque-movimiento  bloque-energia"
+    "bloque-electricidad  bloque-tiempo      bloque-quimica";
+}
+
+.bloque-dimension, .bloque-movimiento, .bloque-electricidad, .bloque-energia, .bloque-quimica, .bloque-tiempo{
+    background-color: #73877B;
+    color:white;
+    margin:20px;
+    text-align: center;
+}
+
+.bloque-dimension{grid-area: bloque-dimension;}
+.bloque-movimiento{grid-area: bloque-movimiento;}
+.bloque-electricidad{grid-area: bloque-electricidad;}
+.bloque-energia{grid-area: bloque-energia;}
+.bloque-quimica{grid-area: bloque-quimica;}
+.bloque-tiempo{grid-area: bloque-tiempo;}
+
+.areas{
+    margin: 50px;
+}
+
+.tiempo{
+    margin-top:50px;
+}
+
+.link{
+    text-decoration: none;
+    color: white;
+}
+
+.link:hover {
+    font-size: 30px;
+}
+
+#formTiempo{
+    text-align: center;
+    margin:50px;
+    background-color: #DCD3D1;
+    padding:20px;
+}
+
+.resultado{
+    background-color: #DCD3D1;
+    color: #73877B;
+    border-radius: 50%;
+    padding: 20px;
+    margin: 20px;
+    text-align: center;
+}
+
+.input{
+    padding:20px;
+    text-align: center;
+}
+
+.respuestasRecientes{
+    margin: 20px;
+    border: 2px solid #73877B; 
+    text-align: center;
+}
+
+.reciente{
+    text-align: center;
+}

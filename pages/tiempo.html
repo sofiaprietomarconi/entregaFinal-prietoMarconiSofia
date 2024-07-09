@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TIEMPO</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <header>
+        <h1> CONVERTIDOR UNIDADES DE TIEMPO <img width="40" height="40" src="https://img.icons8.com/ios/50/FFFFFF/time--v1.png" alt="time--v1"/> </h1>
+    </header>
+
+    <main>
+
+    <div class="contenedor">
+        <div class="bloqueForm">
+        <form id="formTiempo">
+            <label for="entradaSelect"> Convertir de </label>
+            <select id="entradaSelect" name="entradaSelect">
+                <option name = "Nanosegundos" value="Nanosegundos">Nanosegundo</option>
+                <option value ="Microsegundos">Microsegundo</option>
+                <option value="Milisegundos">Milisegundo</option>
+                <option value="Segundos">Segundo</option>
+                <option value ="Minutos">Minuto</option>
+                <option value="Horas">Hora</option>
+                <option value="Dias">Dia</option>
+                <option value="Semanas">Semana</option>
+            </select>
+
+            <label for="salidaSelect"> a </label>
+            <select id="salidaSelect" name="salidaSelect">
+                <option value="Nanosegundos">Nanosegundo</option>
+                <option value ="Microsegundos">Microsegundo</option>
+                <option value="Milisegundos">Milisegundo</option>
+                <option value="Segundos">Segundo</option>
+                <option value ="Minutos">Minuto</option>
+                <option value="Horas">Hora</option>
+                <option value="Dias">Dia</option>
+                <option value="Semanas">Semana</option>
+            </select>
+
+            <img width="15" height="15" src="https://img.icons8.com/ios/50/1A1A1A/equal-sign.png" alt="equal-sign"/>
+
+
+        </form>
+    </div>
+
+    <div class="input">
+        <input type="number" id="valor" placeholder="Valor">
+    </div>
+
+    <div class="resultado" id="resultado">
+        - - 
+    </div>
+
+    <h2 class="reciente">Respuestas recientes</h2>
+
+    <div class="respuestasRecientes" id="respuestasRecientes">
+    </div>
+    </div>
+
+    
+
+    </main>
+
+<script src="../main.js"></script>
+</body>
+</html>
