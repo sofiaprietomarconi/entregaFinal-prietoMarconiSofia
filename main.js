@@ -1,16 +1,76 @@
+//BUSQUEDA DE UNIDADES 
+const unidades = [
+    {name:'dimension' , url:'.//pages/dimension.html'},
+    {name:'area', url:'.//pages/dimension.html'},
+    {name:'longitud' , url:'.//pages/dimension.html'},
+    {name:'volumen' , url:'.//pages/dimension.html'},
+    {name:'movimiento', url:'.//pages/movimiento.html'},
+    {name:'aceleracion', url:'.//pages/movimiento.html'},
+    {name:'velocidad' , url: './/pages/movimiento.html'},
+    {name:'electricidad',  url:'.//pages/electricidad.html'},
+    {name:'resistencia electrica', url:'.//pages/electricidad.html'},
+    {name:'conductancia electrica', url:'.//pages/electricidad.html'},
+    {name:'potencial electrico', url:'.//pages/electricidad.html'},
+    {name:'energia', url:'.//pages/energia.html'},
+    {name:'potencia', url:'.//pages/energia.html'},
+    {name:'temperatura' ,url:'.//pages/energia.html'},
+    {name:'quimica', url:'.//pages/quimica.html'},
+    {name:'densidad', url:'.//pages/quimica.html'},
+    {name:'masa molar' ,url:'.//pages/quimica.html'},
+    {name:'tiempo', url:'.//pages/tiempo.html'},
+    {name:'nanosegundos' , url:'.//pages/tiempo.html'},
+    {name:'microsegundos' , url:'.//pages/tiempo.html'},
+    {name:'milisegundos' , url:'.//pages/tiempo.html'},
+    {name:'segundos' , url:'.//pages/tiempo.html'},
+    {name:'minutos' , url:'.//pages/tiempo.html'},
+    {name:'horas' , url:'.//pages/tiempo.html'},
+    {name:'dias' , url:'.//pages/tiempo.html'},
+    {name:'semanas' , url:'.//pages/tiempo.html'}
+]
 
+
+
+let entradaUnidad = document.getElementById('entradaUnidad')
+let searchResults = document.getElementById('searchResults')
+
+
+entradaUnidad.addEventListener('input', e =>{
+    let valorUnidad = e.target.value.toLowerCase()
+    searchResults.innerHTML=''
+
+    let busquedaItems = unidades.filter (item => item.name.toLowerCase().includes(valorUnidad))
+
+    if (busquedaItems.length > 0){
+        busquedaItems.forEach(unidad =>{
+            let contenedorResultados = document.createElement('div')
+            contenedorResultados.classList.add('searchResultItem')
+            contenedorResultados.innerHTML =  `<a href="${unidad.url}">${unidad.name}</a>`
+            searchResults.appendChild(contenedorResultados)
+        }     
+        )
+    } else{
+        let contenedorResultados = document.createElement('div')
+            contenedorResultados.classList.add('searchResultItem')
+            contenedorResultados.innerHTML =  `<p> NO SE ENCONTRO LA UNIDAD DESEADA </p>`
+            searchResults.appendChild(contenedorResultados)
+    }
+})
+
+
+//CONVERSOR PARA UNIDADES DE DIMENSION
 //CONVERSOR PARA UNIDADES DE TIEMPO
 
-let resultadoTextual = document.getElementById("resultado")
+let resultadoTextual = document.getElementById('resultado')
 
-let valor = document.getElementById("valor")
-valor.addEventListener('keyup', convertir)
-valor.addEventListener("change", convertir)
+
+let valor = document.getElementById('valor')
+valor.addEventListener('keyup' , convertir)
+valor.addEventListener('change' , convertir)
 
 let entradaSelect = document.getElementById('entradaSelect')
 entradaSelect.addEventListener('change', convertir)
 
-let salidaSelect = document.getElementById("salidaSelect")
+let salidaSelect = document.getElementById('salidaSelect')
 salidaSelect.addEventListener('change', convertir)
 
 let resultado
@@ -79,10 +139,10 @@ function convertir (){
 let respuestasRecientes;
 
 function manejarRespuestas() {
-    respuestasRecientes = document.getElementById("respuestasRecientes");
+    respuestasRecientes = document.getElementById('respuestasRecientes');
 
 
-    let resultadoTextual = document.getElementById("resultado");
+    let resultadoTextual = document.getElementById('resultado');
     let resultadoActual = resultadoTextual.innerHTML;
 
 
