@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TIEMPO</title>
     <link rel="stylesheet" href="../style.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 <body>
     <header>
@@ -17,7 +18,7 @@
     <div class="contenedor">
         <div class="bloqueForm">
         <form id="formGeneral">
-            <label for="entradaSelect"> Convertir de </label>
+            <label class="label" for="entradaSelect"> Convertir de </label>
             <select id="entradaSelect" name="entradaSelect">
                 <option name = "Nanosegundos" value="Nanosegundos">Nanosegundo</option>
                 <option value ="Microsegundos">Microsegundo</option>
@@ -25,8 +26,6 @@
                 <option value="Segundos">Segundo</option>
                 <option value ="Minutos">Minuto</option>
                 <option value="Horas">Hora</option>
-                <option value="Dias">Dia</option>
-                <option value="Semanas">Semana</option>
             </select>
 
             <label for="salidaSelect"> a </label>
@@ -37,8 +36,6 @@
                 <option value="Segundos">Segundo</option>
                 <option value ="Minutos">Minuto</option>
                 <option value="Horas">Hora</option>
-                <option value="Dias">Dia</option>
-                <option value="Semanas">Semana</option>
             </select>
 
             <img width="15" height="15" src="https://img.icons8.com/ios/50/1A1A1A/equal-sign.png" alt="equal-sign"/>
@@ -61,9 +58,13 @@
     </div>
     </div>
 
-    
+    <button id="borrarRtasTiempo" class="borrar">BORRAR RESPUESTAS RECIENTES</button>
 
     </main>
-    <script src="../main.js"></script>
+   
+
+<script src="../main.js"></script>
+    
 </body>
+
 </html>

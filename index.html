@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Universal Converter</title>
     <link rel="stylesheet" href="./style.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+ 
 </head>
 <body>
     <header>
@@ -23,30 +25,11 @@
                     <img width="50" height="50" src="https://img.icons8.com/ios/50/b76bcf/length.png" alt="length"/>
                     <a class="link" href=".//pages/dimension.html">DIMENSION</a>
                 </h2>
-            </div>
-            <div class="bloque-movimiento">
-                <h2 class="areas">
-                    <img width="50" height="50" src="https://img.icons8.com/ios/50/b76bcf/speed--v1.png" alt="speed--v1"/>
-                   <a class="link" href=".//pages/movimiento.html">MOVIMIENTO</a>
-                </h2>
-            </div>
-            <div class="bloque-electricidad">
-                <h2 class="areas">
-                    <img width="50" height="50" src="https://img.icons8.com/ios/50/b76bcf/electricity.png" alt="electricity"/>
-                    <a class="link" href=".//pages/electricidad.html">ELECTRICIDAD</a>
-                </h2>
-            </div>
-            <div class="bloque-energia">
-                <h2 class="areas">
-                    <img width="50" height="50" src="https://img.icons8.com/ios/50/b76bcf/temperature--v1.png" alt="temperature--v1"/>
-                    <a class="link" href=".//pages/energia.html">ENERGIA</a>
-                </h2>
-            </div>
-            <div class="bloque-quimica">
-                <h2 class="areas">
-                    <img width="50" height="50" src="https://img.icons8.com/ios/50/b76bcf/physics.png" alt="physics"/>
-                   <a class="link" href=".//pages/quimica.html">QUIMICA</a> 
-                </h2>
+                <p class="referencia">
+                    <a class="linkReferencia" id="refArea" href=".//pages/dimension.html#divArea">Area</a>
+                    <a class="linkReferencia" id="refLong" href=".//pages/dimension.html#divLongitud">Longitud</a>
+                    <a class="linkReferencia" id="refVol" href=".//pages/dimension.html#divVolumen">Volumen</a>
+                </p>
             </div>
             <div class="bloque-tiempo">
                 <h2 class="tiempo">
@@ -56,8 +39,34 @@
             </div>
         </div>
 
+        <div class="numeroDelDia">
+            <h1 class="titulo1"> <img width="50" height="50" src="https://img.icons8.com/ios-filled/50/EBEBEB/ask-question.png" alt="ask-question"/> Curiosidades sobre numeros</h1>
+            <h2 class="titulo2"> Facts, conversiones y mas sobre el numero del dia!</h2>
+            <h3 class="titulo3"> El numero del dia es...</h3>
+            <p id="numeroAleatorio"> Cargando... </p>
+            <h3 class="titulo4"> <img width="30" height="30" src="https://img.icons8.com/ios-glyphs/30/EBEBEB/change--v1.png" alt="change--v1"/>Sus converisones al numeral chino, romano, egipcio y babilonio son...</h3>
+            <p id="conversionRomanos"> Cargando... </p>
+            <p id="conversionChino"> Cargando... </p>
+            <p id="conversionEgipcio"> Cargando... </p>
+            <p id="conversionBabilonio"> Cargando... </p>
+            <h3 class="titulo5"> <img width="32" height="32" src="https://img.icons8.com/badges/48/exclamation-mark.png" alt="exclamation-mark"/> Y algunos facts sobre el numero</h3>
+            <p id="odd">Es impar: Cargando...</p>
+            <p id="even">Es par: Cargando...</p>
+            <p id="palindrome">Es palíndromo: Cargando...</p>
+            <p id="triangle">Es número triangular: Cargando...</p>
+            <p id="prime">Es primo: Cargando...</p>
+            <p id="perfect">Es perfecto: Cargando...</p>
+            <p id="mersenne">Es primo de Mersenne: Cargando...</p>
+            <p id="fermat">Es primo de Fermat: Cargando...</p>
+            <p id="fibonacci">Es primo de Fibonacci: Cargando...</p>
+            <p id="partition">Es primo de partición: Cargando...</p>
+            <p id="pell">Es primo de Pell: Cargando...</p>
+        </div>
+
     </main>
 
+  
     <script src="./main.js"></script>
 </body>
+
 </html>

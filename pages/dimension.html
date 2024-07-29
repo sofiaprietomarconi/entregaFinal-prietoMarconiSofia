@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DIMENSION</title>
     <link rel="stylesheet" href="../style.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 <body>
     <header>
@@ -16,49 +17,23 @@
 
 
 <div class="contenedorTotal">
-    <div class="contenedorArea">
+    <div id="divArea" class="contenedorArea">
         <h1 class="nombrePart">AREA</h1>
         <div class="bloqueForm">
         <form id="formGeneral">
-            <label for="entradaSelect"> Convertir de </label>
-            <select id="entradaSelect" name="entradaSelect">
+            <label class="label" for="entradaArea"> Convertir de </label>
+            <select id="entradaArea" name="entradaArea">
                 <option value="KilometroCuadrado">Kilometro Cuadrado</option>
                 <option value ="Hectarea">Hectarea</option>
-                <option value="Area">Area</option>
+                <option value="MillaCuadrada">Milla Cuadrada</option>
                 <option value="MetroCuadrado">Metro Cuadrado</option>
             </select>
 
-            <label for="salidaSelect"> a </label>
-            <select id="salidaSelect" name="salidaSelect">
+            <label class="label" for="salidaArea"> a </label>
+            <select id="salidaArea" name="salidaArea">
                 <option value="KilometroCuadrado">Kilometro Cuadrado</option>
                 <option value ="Hectarea">Hectarea</option>
-                <option value="Area">Area</option>
-                <option value="MetroCuadrado">Metro Cuadrado</option>
-            </select>
-
-            <img width="15" height="15" src="https://img.icons8.com/ios/50/1A1A1A/equal-sign.png" alt="equal-sign"/>
-
-
-        </form>
-    </div>
-
-    <div class="contenedorLongitud">
-        <h1 class="nombrePart">LONGITUD</h1>
-        <div class="bloqueForm">
-        <form id="formGeneral">
-            <label for="entradaSelect"> Convertir de </label>
-            <select id="entradaSelect" name="entradaSelect">
-                <option value="KilometroCuadrado">Kilometro Cuadrado</option>
-                <option value ="Hectarea">Hectarea</option>
-                <option value="Area">Area</option>
-                <option value="MetroCuadrado">Metro Cuadrado</option>
-            </select>
-
-            <label for="salidaSelect"> a </label>
-            <select id="salidaSelect" name="salidaSelect">
-                <option value="KilometroCuadrado">Kilometro Cuadrado</option>
-                <option value ="Hectarea">Hectarea</option>
-                <option value="Area">Area</option>
+                <option value="MillaCuadrada">Milla Cuadrada</option>
                 <option value="MetroCuadrado">Metro Cuadrado</option>
             </select>
 
@@ -67,22 +42,62 @@
 
         </form>
     </div>
-</div>
-        
+    <div class="input">
+        <input type="number" id="valorArea" placeholder="Valor">
+    </div>
 
-    
+    <div class="resultado" id="resultadoArea">
+        - - 
+    </div> 
         <h2 class="reciente">Respuestas recientes</h2>
     
-        <div class="respuestasRecientes" id="respuestasRecientes">
+        <div class="respuestasRecientes" id="respuestasRecientesArea">
         </div>
+        <button id="borrarRtas" class="borrar">BORRAR RESPUESTAS RECIENTES</button>
+        </div>
+        
+        <div id="divLongitud" class="contenedorLongitud">
+            <h1 class="nombrePart">LONGITUD</h1>
+            <div class="bloqueForm">
+            <form id="formGeneral">
+                <label class="label" for="entradaLongitud"> Convertir de </label>
+                <select id="entradaLongitud" name="entradaLongitud">
+                    <option value="Kilometros">Kilometro</option>
+                    <option value ="Metros">Metro</option>
+                    <option value="Centimetros">Centimetro</option>
+                    <option value="Milimetros">Milimetro</option>
+                </select>
+    
+                <label class="label" for="salidaLongitud"> a </label>
+                <select id="salidaLongitud" name="salidaLongitud">
+                    <option value="Kilometros">Kilometro</option>
+                    <option value ="Metros">Metro</option>
+                    <option value="Centimetros">Centimetro</option>
+                    <option value="Milimetros">Milimetro</option>
+                </select>
+    
+                <img width="15" height="15" src="https://img.icons8.com/ios/50/1A1A1A/equal-sign.png" alt="equal-sign"/>
+    
+    
+            </form>
+        </div>
+        <div class="input">
+            <input type="number" id="valorLongitud" placeholder="Valor">
         </div>
     
+        <div class="resultado" id="resultadoLongitud">
+            - - 
+        </div> 
+            <h2 class="reciente">Respuestas recientes</h2>
         
+            <div class="respuestasRecientes" id="respuestasRecientesLongitud">
+            </div>
+            <button id="borrarRtasLongitud" class="borrar">BORRAR RESPUESTAS RECIENTES</button>
+        </div>
     
         </main>
     
 
     <script src="../main.js"></script>
-
 </body>
 </html>

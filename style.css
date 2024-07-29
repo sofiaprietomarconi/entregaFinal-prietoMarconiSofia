@@ -8,8 +8,8 @@
 }
 
 header{
-    background-color:#f2ebf5;
-    color:#7a787a;
+    background-color:#353335;
+    color:#c2bfc2;
     padding: 30px;
     text-align: center;
     font-weight: 600px;
@@ -18,25 +18,22 @@ header{
 .container{
     height: 100vh;
     display:grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     grid-template-areas: 
-    "bloque-dimension     bloque-movimiento  bloque-energia"
-    "bloque-electricidad  bloque-tiempo      bloque-quimica";
+    "bloque-dimension"
+    "bloque-tiempo";
 }
 
-.bloque-dimension, .bloque-movimiento, .bloque-electricidad, .bloque-energia, .bloque-quimica, .bloque-tiempo{
-    background-color:#f2ebf5;
-    color:#7a787a;
-    margin:20px;
+.bloque-dimension, .bloque-tiempo{
+    background-color:#353335;
+    color:#c2bfc2;
+    margin:40px;
     text-align: center;
+    padding:5px;
 }
 
 .bloque-dimension{grid-area: bloque-dimension;}
-.bloque-movimiento{grid-area: bloque-movimiento;}
-.bloque-electricidad{grid-area: bloque-electricidad;}
-.bloque-energia{grid-area: bloque-energia;}
-.bloque-quimica{grid-area: bloque-quimica;}
 .bloque-tiempo{grid-area: bloque-tiempo;}
 
 .areas{
@@ -49,7 +46,7 @@ header{
 
 .link{
     text-decoration: none;
-    color:#7a787a;
+    color:#c2bfc2;
 }
 
 .link:hover {
@@ -59,13 +56,13 @@ header{
 #formGeneral{
     text-align: center;
     margin:50px;
-    background-color:#97e4f7;
+    background-color:#353335;
     padding:20px;
 }
 
 .resultado{
-    background-color: #97e4f7;
-    color: #73877B;
+    background-color:#353335;
+    color:#c2bfc2;
     border-radius: 50%;
     padding: 20px;
     margin: 20px;
@@ -130,6 +127,63 @@ header{
 
 .nombrePart{
     text-align: center;
-    color:#7a787a;
+    color:#c2bfc2;
 }
 
+.borrar{
+    background-color:#353335;
+    color: white;
+    margin-left: 700px;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.borrar:hover {
+    background-color: white;
+    background-color:#353335;
+}
+
+.contenedorArea{
+    margin:10px;
+    border-radius: 10px;
+}
+
+.contenedorLongitud{
+    margin:10px;
+    border-radius: 10px;
+    margin-top: 70px;
+}
+
+.numeroDelDia{
+    text-align: center;
+    border-radius: 300px;
+    background-color:#353335;
+    color:#c2bfc2;
+}
+
+.linkReferencia{
+    text-decoration: none;
+    color:#c2bfc2;
+
+}
+
+.referencia{
+    display: flex;
+    flex-direction: column;
+}
+
+#refArea:hover{
+    font-size: 20px;
+}
+
+#refLong:hover{
+    font-size: 20px;
+}
+
+#refVol:hover{
+    font-size: 20px;
+}
+
+.label{
+    color:#c2bfc2;
+}
